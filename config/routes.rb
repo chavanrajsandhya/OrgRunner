@@ -1,0 +1,10 @@
+Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: "registrations" }
+  concern :active_scaffold_association, ActiveScaffold::Routing::Association.new
+  concern :active_scaffold, ActiveScaffold::Routing::Basic.new(association: true)
+  resources :profiles, concerns: :active_scaffold
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
+end
