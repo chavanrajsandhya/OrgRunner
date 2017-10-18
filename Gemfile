@@ -12,6 +12,11 @@ gem 'rails', '~> 5.0.6'
 gem 'mysql2'
 gem 'active_scaffold', github: 'activescaffold/active_scaffold', branch: 'master'
 gem 'devise'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
+gem 'pry-rails'
+gem "pry-nav"
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
